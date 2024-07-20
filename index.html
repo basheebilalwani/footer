@@ -36,11 +36,15 @@
             font-size: 1.5rem;
         }
         .carousel-slide {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             transition: transform 0.5s ease-in-out;
         }
         .carousel-control {
             cursor: pointer;
             font-size: 1.5rem;
+            color:black;
         }
     </style>
 </head>
@@ -185,20 +189,24 @@
         const totalSlides = slides.length;
 
         function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.style.transform = `translateX(${(i - index) * 100}%)`;
-            });
+        for (let i = 0; i < totalSlides; i++) {
+            slides[i].style.display = 'none';
+        }
+        slides[index].style.display = 'block';
         }
 
         function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            showSlide(currentSlide);
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
         }
 
         function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            showSlide(currentSlide);
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
         }
+
+        // Initialize the carousel
+        showSlide(currentSlide);
 
         // JavaScript for countdown timer
         const eventDate = new Date('2024-08-01T00:00:00');
