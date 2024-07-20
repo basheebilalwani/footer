@@ -54,6 +54,43 @@
     <footer class="bg-gray-900 text-white py-12" style="background-color: #ecfdf5;">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap justify-between">
+                            <!-- Testimonials Carousel -->
+            <div class="w-full mb-8">
+                <h2 class="text-xl font-bold mb-4 text-black">What Our Members Say</h2>
+                <div class="relative">
+                    <div class="carousel-slide flex overflow-hidden">
+                        <div class="w-full flex-shrink-0 p-4">
+                            <blockquote class="bg-white p-6 rounded-lg shadow-lg text-gray-900">
+                                <p>"CodeSquad has been a fantastic experience. The opportunities to learn and grow are unmatched!"</p>
+                                <footer class="mt-4">
+                                  Web Development Club
+                                </footer>
+                            </blockquote>
+                        </div>
+                        <div class="w-full flex-shrink-0 p-4">
+                            <blockquote class="bg-white p-6 rounded-lg shadow-lg text-gray-900">
+                                <p>"Being part of CodeSquad's Research Club has opened doors to exciting projects and collaborations."</p>
+                                <footer class="mt-4">
+                                  Research Club
+                                </footer>
+                            </blockquote>
+                        </div>
+                        <!-- Add more slides as needed -->
+                    </div>
+                    <button class="absolute top-1/2 left-0 transform -translate-y-1/2 carousel-control" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+                    <button class="absolute top-1/2 right-0 transform -translate-y-1/2 carousel-control" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <!-- Event Countdown -->
+            <div class="w-full mb-8">
+                <h2 class="text-xl font-bold mb-4 text-black">Upcoming Event</h2>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-gray-900 text-center">
+                    <p class="text-lg font-semibold mb-4">CodeSquad Annual Hackathon</p>
+                    <div id="countdown" class="text-2xl font-bold text-gray-800">
+                        00:00:00:00
+                    </div>
+                </div>
+            </div>
                 <!-- About Section -->
                 <div class="w-full sm:w-1/2 md:w-1/4 mb-8 footer-segment">
                     <h2 class="text-xl font-bold mb-4 text-black">About</h2>
@@ -100,70 +137,6 @@
                         <li>Location: Central University of Kashmir </li>
                     </ul>
                 </div>
-                <!-- Quick Links Section -->
-                <div class="w-full sm:w-1/2 md:w-1/4 mb-8 footer-segment">
-                    <h2 class="text-xl font-bold mb-4 text-black">Quick Links</h2>
-                    <ul class="space-y-2 text-black">
-                        <li class="flex items-center">
-                            <i class="fas fa-home mr-2"></i>
-                            <a href="#" class="hover:underline">Home</a>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-info-circle mr-2"></i>
-                            <a href="#" class="hover:underline">About Us</a>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-blog mr-2"></i>
-                            <a href="#" class="hover:underline">Blog</a>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-calendar-alt mr-2"></i>
-                            <a href="#" class="hover:underline">Events</a>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone-alt mr-2"></i>
-                            <a href="#" class="hover:underline">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Testimonials Carousel -->
-            <div class="w-full mb-8">
-                <h2 class="text-xl font-bold mb-4 text-black">What Our Members Say</h2>
-                <div class="relative">
-                    <div class="carousel-slide flex overflow-hidden">
-                        <div class="w-full flex-shrink-0 p-4">
-                            <blockquote class="bg-white p-6 rounded-lg shadow-lg text-gray-900">
-                                <p>"CodeSquad has been a fantastic experience. The opportunities to learn and grow are unmatched!"</p>
-                                <footer class="mt-4">
-                                  Web Development Club
-                                </footer>
-                            </blockquote>
-                        </div>
-                        <div class="w-full flex-shrink-0 p-4">
-                            <blockquote class="bg-white p-6 rounded-lg shadow-lg text-gray-900">
-                                <p>"Being part of CodeSquad's Research Club has opened doors to exciting projects and collaborations."</p>
-                                <footer class="mt-4">
-                                  Research Club
-                                </footer>
-                            </blockquote>
-                        </div>
-                        <!-- Add more slides as needed -->
-                    </div>
-                    <button class="absolute top-1/2 left-0 transform -translate-y-1/2 carousel-control" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
-                    <button class="absolute top-1/2 right-0 transform -translate-y-1/2 carousel-control" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
-                </div>
-            </div>
-            <!-- Event Countdown -->
-            <div class="w-full mb-8">
-                <h2 class="text-xl font-bold mb-4 text-black">Upcoming Event</h2>
-                <div class="bg-white p-6 rounded-lg shadow-lg text-gray-900 text-center">
-                    <p class="text-lg font-semibold mb-4">CodeSquad Annual Hackathon</p>
-                    <div id="countdown" class="text-2xl font-bold text-gray-800">
-                        00:00:00:00
-                    </div>
-                </div>
-            </div>
             <!-- Social Media Links and Move to Top -->
             <div class="flex justify-between items-center mt-8">
                 <!-- Social Media Links -->
@@ -172,15 +145,15 @@
                     <a href="#" class="text-black"><i class="fab fa-discord"></i></a>
                     <a href="#" class="text-black"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-                <!-- Move to Top Button -->
-                <div>
-                    <button onclick="scrollToTop()" class="move-to-top px-4 py-2 rounded-lg flex items-center space-x-2"><i class="fas fa-arrow-up"></i> <span>Move to Top</span></button>
-                </div>
             </div>
         </div>
         <!-- Copyright Section -->
         <div class="bg-gray-800 text-center py-4 mt-6" style="background-color: #ecfdf5;">
             <p class="text-black">&copy; 2024 CodeSquad. All rights reserved.</p>
+        </div>
+        <!-- Move to Top Button -->
+        <div>
+            <button onclick="scrollToTop()" class="move-to-top px-4 py-2 rounded-lg flex items-center space-x-2 float-right"><i class="fas fa-arrow-up"></i> <span>Move to Top</span></button>
         </div>
     </footer>
     <script>
